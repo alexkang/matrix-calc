@@ -12,8 +12,9 @@ class Interface(object):
         3. Multiply matrices
         4. Scalar multiply matrices
         5. Transpose a matrix
-        6. Find determinant of a matrix
-        7. Find inverse of a matrix
+        6. Upper and lower triangle Matrix
+        7. Find determinant of a matrix
+        8. Find inverse of a matrix
         8. Exit
         """)
 
@@ -31,6 +32,12 @@ class Interface(object):
             elif selection == "5":
                 return Interface().transpose()
             elif selection == "6":
+                sel2=input("1.Lower 2.Upper")
+                if sel2=="1":
+                    return Interface().low()
+                elif sel2=="2":
+                    return Interface().up()
+            elif selection == "7":
                 return Interface().det()
             elif selection == "7":
                 return Interface().inverse()
